@@ -1,0 +1,44 @@
+.section-subscribe {
+  background-color: map-get($map-colorbg-section, subscribe);
+
+  @media (min-width: $screen-md-min) {
+    min-height: 500px;
+    background: url(../img/bg-subscribe.jpg) center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.form-subscribe {
+
+  &__field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 12px;
+    font-size: $font-size-form;
+    font-weight: 300;
+    line-height: 1.8;
+    border: map-get($map-color-border-form-supscribe, border) solid 1px;
+    outline-color: transparent; 
+    
+    &:focus {
+      outline: lighten(map-get($map-color-border-form-supscribe, outline), 10%) solid 3px;
+      border-color: lighten(map-get($map-color-border-form-supscribe, border), 40%);
+    }
+
+    &:hover {
+      @media (min-width: $screen-md-min) {
+        outline: map-get($map-color-border-form-supscribe, outline) solid 3px;
+        border-color: lighten(map-get($map-color-border-form-supscribe, border), 40%);
+      }
+    }
+
+    &:active {
+      outline: darken(map-get($map-color-border-form-supscribe, outline), 10%) solid 3px;
+      border-color: lighten(map-get($map-color-border-form-supscribe, border), 40%);
+    }
+
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 0;
+    }
+  }  
+}

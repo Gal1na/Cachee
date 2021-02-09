@@ -1,0 +1,45 @@
+.section-services {
+  background-color: map-get($map-colorbg-section, services);
+  color: $font-color-secondary;
+
+  &__controls {
+    @media (min-width: $screen-lg-min) {
+      padding-top: 55px;
+    }    
+
+    @media (min-width: $screen-xlg-min) {
+      padding-right: 58px;
+      padding-top: 75px;
+    }
+  }
+
+  &__info {
+    position: relative;
+
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 0;
+    }
+    
+  }
+
+  &__img {
+    margin-left: auto;
+
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @media (min-width: $screen-md-min) {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+      padding-left: 60px;
+    }       
+  } 
+}

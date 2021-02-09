@@ -1,0 +1,30 @@
+.section-gallery {
+  background-color: map-get($map-colorbg-section, gallery);
+  text-align: center;
+
+  &__photos {
+    font-size: 0;
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      margin-bottom: 12px;
+    }    
+  }
+
+  &__img {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    max-width: 370px;
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 100%;
+    }
+  }
+}

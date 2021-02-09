@@ -1,0 +1,26 @@
+.section-about {
+  background-color: map-get($map-colorbg-section, about);
+  color: $font-color-secondary;
+
+  &__info {
+    margin-bottom: 0;
+
+    @media (min-width: $screen-xlg-min) {
+      padding-left: 70px;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+      display: block;
+      margin-left: 0;
+      filter: drop-shadow(-17px 9px 20px rgba(0, 0, 0, 0.3));
+    }
+
+    @media (min-width: $screen-md-min) {
+      margin-left: 12px;
+    }
+  }
+}

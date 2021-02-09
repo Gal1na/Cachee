@@ -1,0 +1,22 @@
+.header {
+  padding-top: 355px;
+  padding-bottom: 60px;
+  background-color: #f9f9fb;
+  position: relative;
+
+  @media (min-width: $screen-md-min) {
+    background: url(/img/bg-header.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+}

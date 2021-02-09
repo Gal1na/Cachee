@@ -1,0 +1,206 @@
+%controls-transition {
+	-webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,opacity .15s ease-in-out,-webkit-box-shadow .15s ease-in-out, visibility .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,opacity .15s ease-in-out, visibility .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,opacity .15s ease-in-out, visibility .15s ease-in-out;
+    cursor: pointer;
+}
+
+@mixin focus-hover-active($bg-color, $font-color) {
+  
+  &:focus {
+    box-shadow: none;
+    outline: 3px solid $bg-color;
+    outline-offset: 2px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    &:hover {
+      color: darken($bg-color, 10%);
+      background-color: $font-color;
+      box-shadow: none;
+      outline:  3px solid $bg-color;
+    }
+  }
+
+  &:active {
+    background-color: darken($bg-color, 10%);
+    color: $font-color;
+    box-shadow: none;
+  }
+}
+
+a,
+button,
+ {
+	@extend %controls-transition;
+}
+
+input {
+	&[type=button],
+	&[type=submit] {
+		 @extend %controls-transition;
+	}
+}
+
+a {
+	text-decoration: none;
+  color: $font-color-primary;
+}
+
+.btn {
+  position: relative;
+	display: inline-block;
+  min-width: 100%;
+  padding: 0.9em 1.35em;
+  font-size: $font-size-lg;
+  font-weight: 300; 
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  background-color: $bg-color-primary;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $screen-sm-min) {
+    min-width: 170px;
+  }
+
+  &--primary {
+    background-color: map-get($map-color-bg-controls, 1);
+    color: $font-color-secondary;
+
+    @include focus-hover-active (map-get($map-color-bg-controls, 1), $font-color-secondary);    
+  }
+
+  &--secondary {
+    background-color: map-get($map-color-bg-controls, 2);
+    color: $font-color-secondary;
+
+    @include focus-hover-active (map-get($map-color-bg-controls, 2), $font-color-secondary);
+  }
+
+  &--success {
+    background-color: map-get($map-color-bg-controls, 3);
+    color: $font-color-secondary;
+
+    @include focus-hover-active (map-get($map-color-bg-controls, 3), $font-color-secondary);
+  }
+
+  &--danger {
+    background-color: map-get($map-color-bg-controls, 4);
+    color: $font-color-secondary;
+
+    @include focus-hover-active (map-get($map-color-bg-controls, 4), $font-color-secondary);
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+.btn-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 18px clamp(78px, calc(25% + 18px), 118px) 18px 18px;
+  font-weight: 700;
+  text-transform: inherit;
+  line-height: 1.35;
+  white-space: normal;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: $font-size-md;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: clamp(60px, 25%, 100px);
+    height: 100%;
+    border-left: 1px solid #9d9d9d;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+
+  &--shopping:after {
+    background-image: url(/img/icon-shopping.svg);
+  }
+
+  &--product:after {
+    background-image: url(/img/icon-product.svg);
+  }
+
+  &--delivery:after {
+    background-image: url(/img/icon-delivery.svg);
+  }
+
+  &--organized:after {
+    background-image: url(/img/icon-organize.svg);
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: #1e8694 solid 3px;
+  }
+
+  &:hover {
+    @media (min-width: $screen-md-min) {      
+      background-color: #95f0fd;
+      box-shadow: none;
+      outline: #1e8694 solid 3px;
+    }
+  }
+
+  &:active {
+    background-color: #19c1d9;
+    box-shadow: none;
+  }
+}
+
+.scroll {
+  display: block;
+  height: 40px;
+  width: 24px;
+  position: absolute;
+  bottom: 69px;
+  left: 50%;
+  margin-left: -12px;
+  
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+
+  &:focus {
+    opacity: 0.7;
+    outline: 1px solid gray;
+  }
+
+  &:hover {
+    @media (min-width: $screen-md-min) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+    outline: 1px solid #ff6033;
+  }
+}

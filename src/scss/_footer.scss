@@ -1,0 +1,100 @@
+.footer {
+  background-color: $bg-color-footer;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #b9b9b9;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-sm-min) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__site-author {
+    margin-bottom: 10px;
+    font-size: $font-size-sm;
+    font-weight: 300;
+    line-height: 1.666666;
+    text-align: left;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 12px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      font-size: 0.9375rem;
+    }
+  }
+
+  &__link-author {
+    font-weight: bold;
+    color: $color-link-autor;
+
+    &:focus {
+      color: lighten($color-link-autor, 20%);
+      outline: 1px solid $color-link-autor;
+    }
+
+    &:hover {
+      @media (min-width: $screen-md-min) {
+        color: lighten($color-link-autor, 20%);
+        outline: 1px solid $color-link-autor;
+      }
+    }
+
+    &:active {
+      color: darken($color-link-autor, 20%);
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size-sm;
+    font-weight: 300;
+    line-height: 1.5625;
+
+    @media (min-width: $screen-sm-min) {
+      order: -1;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 13px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+
+.For_new_projects__ideas__business_or_anything_y {
+  font-size: 17px;
+  font-family: "Raleway";
+  color: rgb(38, 38, 38);
+  line-height: 1.471;
+  text-align: center;
+  position: absolute;
+  left: 449.481px;
+  top: 5626.771px;
+  width: 342px;
+  height: 41px;
+  z-index: 30;
+}

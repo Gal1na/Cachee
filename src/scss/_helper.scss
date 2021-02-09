@@ -1,0 +1,23 @@
+.wrapper--relative {
+  position: relative;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.row-flex {
+  display: block;
+
+  @media (min-width: $screen-md-min) {
+    display: flex;
+  }
+}
+
+.col-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
